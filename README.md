@@ -20,8 +20,8 @@ Before running this script, ensure you have the following installed and configur
 
 ### 1. Clone this repository
 ```sh
-git clone <your-repo-url>
-cd <your-repo-name>
+git clone https://github.com/UkkyNtem/linux-update-automation.git
+cd linux-update-automation
 ```
 
 ### 2. Make the script executable
