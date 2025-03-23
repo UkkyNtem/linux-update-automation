@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOG_FILE="$HOME/system_update.log"
-EMAIL="ukementem32@gmail.com"  #  recipient email
+EMAIL="receiver@gmail.com"  #  recipient email
 
 # Set PATH to include directories for brew and aws
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin"
@@ -30,7 +30,7 @@ echo "Sending email to $EMAIL..." >> "$LOG_FILE"
 # Send email using AWS SES
 if command -v aws &> /dev/null; then
     aws ses send-email \
-        --from "ukementem32@gmail.com" \
+        --from "sender@gmail.com" \
         --destination "ToAddresses=$EMAIL" \
         --message "Subject={Data='$SUBJECT'},Body={Text={Data='$MESSAGE',Charset='UTF-8'}}" \
         >> "$LOG_FILE" 2>&1
